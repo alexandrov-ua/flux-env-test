@@ -22,8 +22,9 @@ spec:
         env: {{ .Values.configuration | toYaml | nindent 10 }}
         {{- if .Values.configurationSecretName }}
         envFrom:
-          - secretRef:
+          - secretKeyRef:
             name: {{ .Values.configurationSecretName }}
+            key: values.yaml
         {{- end }}
 ---
 apiVersion: v1
