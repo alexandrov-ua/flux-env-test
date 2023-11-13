@@ -2,3 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - nginx-app.yaml
+secretGenerator:
+  - name: podinfo-values
+    files:
+      - values.yaml=nginx-app-secrets.yaml
+configurations:
+  - nginx-app-values
