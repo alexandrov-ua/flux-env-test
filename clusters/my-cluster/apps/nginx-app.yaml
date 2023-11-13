@@ -14,9 +14,6 @@ spec:
         name: this-repo
         namespace: flux-system
       interval: 1m
-  valuesFrom:
-    - kind: Secret
-      name: nginx-app-values
   values:
     replicaCount: 2
     name: my-nginx-app
