@@ -23,7 +23,7 @@ spec:
         {{- if .Values.configurationSecretName }}
         envFrom:
           - secretRef:
-              name: {{ .Values.configurationSecretName }}
+            name: {{ .Values.configurationSecretName }}
         {{- end }}
 ---
 apiVersion: v1
