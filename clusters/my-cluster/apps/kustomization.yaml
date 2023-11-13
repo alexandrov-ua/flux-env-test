@@ -3,8 +3,8 @@ kind: Kustomization
 resources:
 - nginx-app.yaml
 secretGenerator:
-  - name: podinfo-values
+  - name: nginx-app-values
     files:
       - values.yaml=nginx-app-secrets.yaml
 configurations:
-  - nginx-app-values
+  - kustomizeconfig.yaml
