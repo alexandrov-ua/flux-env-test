@@ -16,3 +16,10 @@ spec:
       interval: 1m
   values:
     replicaCount: 2
+    name: my-nginx-app
+    image:
+      name: nginx
+      tag: 1.24.0
+    configuration:
+    - name: NGINX_PORT
+      value: "80"
