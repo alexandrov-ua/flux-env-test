@@ -23,6 +23,9 @@ spec:
     image:
       name: nginx
       tag: 1.24.0
-#    configuration:
-#    - name: NGINX_PORT
-#      value: "80"
+    configurationSecretName: nginx-app-values
+    configuration:
+    - name: NGINX_PORT
+      value: "80"
+    - name: asd
+      value: zxc

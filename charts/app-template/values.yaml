@@ -3,6 +3,7 @@ name: my-app
 image:
   name: nginx
   tag: latest
+configurationSecretName: null
 configuration:
   - name: Qwe
     value: Asd

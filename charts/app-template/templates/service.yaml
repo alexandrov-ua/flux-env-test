@@ -20,6 +20,11 @@ spec:
         ports:
         - containerPort: 80
         env: {{ .Values.configuration | toYaml | nindent 10 }}
+        {{- if .Values.configurationSecretName }}
+        envFrom:
+        - secretRef:
+            name: {{ .Values.configurationSecretName }}
+        {{- end }}
 ---
 apiVersion: v1
 kind: Service
