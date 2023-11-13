@@ -6,6 +6,6 @@ resources:
 secretGenerator:
   - name: nginx-app-values
     files: 
-    - values.yaml=nginx-app-secrets.yaml
+      - values.yaml=nginx-app-secrets.yaml
 configurations:
   - kustomizeconfig.yaml
