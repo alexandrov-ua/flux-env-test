@@ -7,7 +7,7 @@ spec:
   interval: 1m
   url: https://github.com/alexandrov-ua/flux-env-test
   ref:
-    branch: master
+    branch: main
   ignore: |
     # exclude all
     /*
