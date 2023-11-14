@@ -20,7 +20,7 @@ spec:
     image:
       name: nginx
       tag: 1.24.0
-    configurationSecretName: basic-auth
+    configurationSecretName: nginx-app-secrets
     configuration:
     - name: NGINX_PORT
       value: "80"

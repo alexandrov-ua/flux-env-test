@@ -3,10 +3,4 @@ kind: Kustomization
 namespace: default
 resources:
 - nginx-app.yaml
-- basic-auth-sealed.yaml
-secretGenerator:
-  - name: nginx-app-values
-    files: 
-      - values.yaml=nginx-app-secrets.yaml
-configurations:
-  - kustomizeconfig.yaml
+- nginx-app-secrets.yaml
