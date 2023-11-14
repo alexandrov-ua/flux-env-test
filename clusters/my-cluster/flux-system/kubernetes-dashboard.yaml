@@ -41,6 +41,16 @@ subjects:
   name: admin-user
   namespace: flux-system
 ---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: testsecret-tls
+  namespace: default
+data:
+  tls.crt: base64 encoded cert
+  tls.key: base64 encoded key
+type: kubernetes.io/tls
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -49,6 +59,10 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
+  tls:
+  - hosts:
+      - local-ingress.com
+    secretName: testsecret-tls
   rules:
   - host: local-ingress.com
     http:
