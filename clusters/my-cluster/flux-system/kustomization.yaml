@@ -6,3 +6,4 @@ resources:
 - helm-repository.yaml
 - sealed-secrets.yaml
 - ww-gitops.yaml
+- kubernetes-dashboard.yaml
