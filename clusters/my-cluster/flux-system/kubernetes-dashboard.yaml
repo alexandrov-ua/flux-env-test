@@ -16,7 +16,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: kubernetes-dashboard/kubernetes-dashboard
+      chart: kubernetes-dashboard
       sourceRef:
         kind: HelmRepository
         name: kubernetes-dashboard
