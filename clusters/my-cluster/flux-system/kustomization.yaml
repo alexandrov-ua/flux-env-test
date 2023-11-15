@@ -7,3 +7,4 @@ resources:
 - sealed-secrets.yaml
 - ww-gitops.yaml
 - kubernetes-dashboard.yaml
+- monitoring.yaml
