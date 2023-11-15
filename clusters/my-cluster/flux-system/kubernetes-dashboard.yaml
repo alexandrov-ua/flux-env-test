@@ -51,7 +51,7 @@ data:
   tls.key: base64 encoded key
 type: kubernetes.io/tls
 ---
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   namespace: flux-system
@@ -60,13 +60,11 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
-    # Uncomment next if you use https://cert-manager.io/
-    #cert-manager.io/cluster-issuer: "<YOUR CLUSTER ISSUER>"
 spec:
   tls:
   - hosts:
     - local-ingress.com
-    secretName: kubernetes-dashboard-cert
+    secretName: testsecret-tls
   rules:
   - host: local-ingress.com
     http:
