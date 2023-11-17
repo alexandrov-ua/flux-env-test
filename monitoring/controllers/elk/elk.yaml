@@ -11,7 +11,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: eck-operator
-  namespace: flux-system
+  namespace: monitoring
 spec:
   chart:
     spec:
@@ -22,4 +22,4 @@ spec:
       version: ">=1.15.0-0"
   interval: 1h0m0s
   releaseName: eck-operator
-  targetNamespace: flux-system
+  targetNamespace: monitoring
