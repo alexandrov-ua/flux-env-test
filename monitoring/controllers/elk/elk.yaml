@@ -15,7 +15,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: elastic/eck-operator
+      chart: eck-operator
       sourceRef:
         kind: HelmRepository
         name: elk
