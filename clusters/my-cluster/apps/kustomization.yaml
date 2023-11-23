@@ -4,3 +4,4 @@ namespace: default
 resources:
 - nginx-app.yaml
 - nginx-app-secrets.yaml
+- echo-app.yaml
